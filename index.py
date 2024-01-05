@@ -5,23 +5,23 @@ import mss
 import numpy as np
 from os import listdir
 import yaml
-from random import random;
+from random import random
 cat = """
-                                                  _
-                                                  \`*-.
-                                                  )  _`-.
-                                                  .  : `. .
-                                                  : _   '  \\
-                                                  ; *` _.   `*-._
-                                                  `-.-'          `-.
-                                                    ;       `       `.
-                                                    :.       .        \\
-                                                    . \  .   :   .-'   .
-                                                    '  `+.;  ;  '      :
-                                                    :  '  |    ;       ;-.
-                                                    ; '   : :`-:     _.`* ;
-                                                .*' /  .*' ; .*`- +'  `*'
-                                                `*-*   `*-*  `*-*'
+                                                _
+                                                \`*-.
+                                                 )  _`-.
+                                                .  : `. .
+                                                : _   '  \\
+                                                ; *` _.   `*-._
+                                                `-.-'          `-.
+                                                  ;       `       `.
+                                                  :.       .        \\
+                                                  . \  .   :   .-'   .
+                                                  '  `+.;  ;  '      :
+                                                  :  '  |    ;       ;-.
+                                                  ; '   : :`-:     _.`* ;
+                                               .*' /  .*' ; .*`- +'  `*'
+                                               `*-*   `*-*  `*-*'
 =========================================================================
     Sript criado por: Gonay (Daniel Miranda)
     Linkedin:https://www.linkedin.com/in/daniel-miranda97/
