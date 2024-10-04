@@ -6,6 +6,8 @@ import numpy as np
 from os import listdir
 import yaml
 from random import random
+import pygetwindow as gw
+
 cat = """
                                                 _
                                                 \`*-.
@@ -104,6 +106,14 @@ def positions(target, threshold=cm['default'], img = None):
   rectangles, weights = cv.groupRectangles(rectangles, 1, 0.2)
   return rectangles
 
+def list_all_windows():
+    windows = gw.getAllWindows()
+    print("=" * 40)
+    print("Janelas Abertas:")
+    print("=" * 40)
+    for idx, window in enumerate(windows):
+        print(f"{idx + 1}. Título: '{window.title}'")
+    print("=" * 40)
 def takeTokenMeta():
   """ Seleciona a aba e realiza as ações"""
   pag.hotkey('winleft','1')
@@ -112,8 +122,20 @@ def takeTokenMeta():
   time.sleep(1)
   pag.press('f5')
   time.sleep(15)
-  clickBtn(images['reloadBTN'])
-  time.sleep(1)
+  clickBtn(images['generateTokenBTN'])
+  time.sleep(5)
+
+  list_all_windows()
+
+  for window in gw.getAllWindows():
+     if "Entrar com o Facebook" in window.title:
+        window.maximize()
+        time.sleep(2)
+        break
+     
+  time.sleep(3)   
+  clickBtn(images['reconnectBTN'])
+  time.sleep(5)
   clickBtn(images['copyBTN'])
   time.sleep(1)
 
@@ -137,5 +159,7 @@ def main():
   time.sleep(3)
   takeTokenMeta()
   putTokenOnChatWoot()
-
+  print('=' * 40)
+  print('Token renovado com sucesso!')
+  print('=' * 40)
 main()
