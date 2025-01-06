@@ -145,7 +145,7 @@ def putTokenOnChatWoot():
   time.sleep(1)
   pag.press('f5')
   time.sleep(15)
-  clickBtn(images['configBTN'])
+  clickBtn(images['configBTN'], threshold=0.8)
   time.sleep(2)
   clickBtn(images['emptyToken'])
   pag.hotkey('ctrlleft','v')
